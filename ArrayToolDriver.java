@@ -10,30 +10,19 @@ public class ArrayToolDriver {
   
   public static void main(String[] args) throws FileNotFoundException
   {
+    for(int i = 1; i <= 5; i++)
+    {
+    Scanner getStats = new Scanner(new File("BubbleStatsForNerds.txt"));
     ArrayList<Integer> nums = ArrayTools.createRandom(5);
-//    ArrayList<Integer> swaps = new ArrayList<Integer>();
-//    ArrayList<Integer> comps = new ArrayList<Integer>();
-//    ArrayList<Integer> time = new ArrayList<Integer>();
-//    int trials = 5;
-//
-//    for(int i = 1; i <= trials; i++)
-//    {
-      ArrayTools.print(nums);
-      ArrayTools.bubbleSort(nums, true); 
-      ArrayTools.print(nums);
-//      
-//      Scanner getStats = new Scanner("bees.txt");
-////      time.add(getStats.nextInt());
-////      swaps.add(getStats.nextInt());
-////      comps.add(getStats.nextInt());
-//      String temp = getStats.nextLine();
-//      String temp2 = getStats.nextLine();
-//      String temp3 = getStats.next();
-//      getStats.close();
-//    }
-//    
-//    ArrayTools.print(time);
-//    ArrayTools.print(swaps);
-//    ArrayTools.print(comps);
+
+    ArrayTools.print(nums);
+    ArrayTools.bubbleSort(nums, true); 
+    ArrayTools.print(nums);
+
+    System.out.print(getStats.nextLine() + " nanoseconds ");
+    System.out.print(getStats.nextLine() + " swaps ");
+    System.out.println(getStats.nextLine() + " comparisons ");
+    getStats.close();
+    }
   }
 }
